@@ -9,12 +9,35 @@ import (
 func SetupUserRoutes(r *gin.Engine) {
 	users := r.Group("/users")
 
-	users.GET("/me", handleMe) 
+	users.GET("/", getAllUsers) 
+	users.GET("/:id", getUserById)
+	users.POST("/", createUser)
+	users.DELETE("/:id", deleteUser)
 
 }
 
-func handleMe(c *gin.Context) {
+func getAllUsers(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H {
-		"message": "joe",
+		"message": "List all users here",
+	})
+}
+
+func getUserById(c *gin.Context) {
+	id := c.Param("id")
+	c.JSON(http.StatusOK, gin.H{
+		"message": "User with UserID" + id,
+	})
+}
+
+func createUser(c *gin.Context){
+	c.JSON(http.StatusOK, gin.H{
+		"message": "User Created",
+	})
+}
+
+func deleteUser(c *gin.Context) {
+	id := c.Param("id")
+	c.JSON(http.StatusOK, gin.H{
+		"message": "User Deleted" + id,
 	})
 }
