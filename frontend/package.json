@@ -21,6 +21,7 @@
     "@mantine/notifications": "^7.13.4",
     "@mantine/nprogress": "^7.13.4",
     "@mantine/spotlight": "^7.13.4",
+    "@tabler/icons-react": "^3.20.0",
     "dayjs": "^1.11.13",
     "embla-carousel-react": "^7.1.0",
     "react": "^18.3.1",
