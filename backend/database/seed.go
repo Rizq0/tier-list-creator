@@ -10,6 +10,13 @@ func SeedUsers() error {
 		return fmt.Errorf("database connection unavailable")
 	}
 
+	var userResult []models.User
+	result := DB.Find(&userResult)
+
+	if result.RowsAffected > 0 {
+		return nil
+	}
+
 	users := []models.User{
 		{Name: "Test 1", Email: "test1@test.com"},
 		{Name: "Test 2", Email: "test2@test.com"},
@@ -30,6 +37,13 @@ func SeedUsers() error {
 func SeedTierlists() error {
 	if DB == nil {
 		return fmt.Errorf("database connection unavailable")
+	}
+
+	var tierlistResult []models.Tierlist
+	result := DB.Find(&tierlistResult)
+
+	if result.RowsAffected > 0 {
+		return nil
 	}
 
 	tierlists := []models.Tierlist{
