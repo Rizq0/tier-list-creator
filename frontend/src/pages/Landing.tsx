@@ -1,4 +1,4 @@
-import { Grid, SimpleGrid } from '@mantine/core'
+import { Grid } from '@mantine/core'
 import React from 'react'
 
 const Landing = () => {

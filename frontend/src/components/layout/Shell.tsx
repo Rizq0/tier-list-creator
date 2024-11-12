@@ -14,12 +14,11 @@ const Shell = () => {
       navbar={{
         width: 300,
         breakpoint: 'md',
-        collapsed: { mobile: openedMenu, desktop: openedMenu },
+        collapsed: { mobile: !openedMenu, desktop: !openedMenu },
       }}
     >
       <AppShell.Header>
         <Group h="60" px="md">
-          <div>Header</div>
           <Burger size="lg" opened={openedMenu} onClick={toggle} />
         </Group>
       </AppShell.Header>

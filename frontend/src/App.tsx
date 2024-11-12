@@ -4,7 +4,7 @@ import '@mantine/core/styles.css';
 
 import './App.css'
 import { theme } from './theme/Theme';
-import ErrorBoundary from './components/Utils/ErrorBoundary';
+import ErrorBoundary from './components/utils/ErrorBoundary';
 import Router from './router/Router';
 
 function App() {
