@@ -17,6 +17,7 @@ type Tiers struct {
 	Text string `json:"text"`
 	Colour string `json:"colour"`
 	Tierlist Tierlist `gorm:"foreignKey:TierlistID"`
+	Items []Items `gorm:"foreignKey:TierID"`
 }
 
 type Items struct {
@@ -26,4 +27,5 @@ type Items struct {
 	Image string `json:"image"`
 	TierID int `json:"tier_id"`
 	Tier Tiers `gorm:"foreignKey:TierID"`
+	Tierlist Tierlist `gorm:"foreignKey:TierlistID"`
 }

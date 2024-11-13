@@ -106,10 +106,11 @@ func SeedItems() error {
 	}
 
 	items := []models.Items{
-		{TierlistID: 1, Text: "Nacht der Untoten", Image: "https://static.wikia.nocookie.net/callofduty/images/2/2b/Nacht_Der_Untoten_Menu_Selection_WaW.png/revision/latest?cb=20161009103531", TierID: 1},
-		{TierlistID: 1, Text: "Verrückt", Image: "https://static.wikia.nocookie.net/callofduty/images/a/a1/Verruckt_Menu_Selection_WaW.png/revision/latest?cb=20161009103542", TierID: 2},
-		{TierlistID: 1, Text: "Shi No Numa", Image: "https://static.wikia.nocookie.net/callofduty/images/2/2f/Shi_No_Numa_Menu_Selection_WaW.png/revision/latest?cb=20161009103553", TierID: 3},
-		{TierlistID: 1, Text: "Der Riese", Image: "https://static.wikia.nocookie.net/callofduty/images/8/86/Der_Riese_Menu_Selection_WaW.png/revision/latest?cb=20161009103603", TierID: 4},
+		{TierlistID: 1, Text: "Nacht der Untoten", Image: "https://static.wikia.nocookie.net/callofduty/images/2/2b/Nacht_Der_Untoten_Menu_Selection_WaW.png/revision/latest?cb=20161009103531", TierID: 4},
+		{TierlistID: 1, Text: "Verrückt", Image: "https://static.wikia.nocookie.net/callofduty/images/a/a1/Verruckt_Menu_Selection_WaW.png/revision/latest?cb=20161009103542", TierID: 3},
+		{TierlistID: 1, Text: "Shi No Numa", Image: "https://static.wikia.nocookie.net/callofduty/images/2/2f/Shi_No_Numa_Menu_Selection_WaW.png/revision/latest?cb=20161009103553", TierID: 2},
+		{TierlistID: 1, Text: "Der Riese", Image: "https://static.wikia.nocookie.net/callofduty/images/8/86/Der_Riese_Menu_Selection_WaW.png/revision/latest?cb=20161009103603", TierID: 1},
+		{TierlistID: 1, Text: "Moon", Image: "https://static.wikia.nocookie.net/callofduty/images/c/cc/Moon_Menu_Selection_BO.png/revision/latest?cb=20240710075602", TierID: 1},
 	}
 
 	for _, item := range items {
