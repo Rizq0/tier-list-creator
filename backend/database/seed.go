@@ -67,14 +67,14 @@ func SeedTiers() error {
 		return fmt.Errorf("database connection unavailable")
 	}
 
-	var tiersResult []models.Tiers
+	var tiersResult []models.Tier
 	result := DB.Find(&tiersResult)
 
 	if result.RowsAffected > 0 {
 		return nil
 	}
 
-	tiers := []models.Tiers{
+	tiers := []models.Tier{
 		{TierlistID: 1, Text: "S", Colour: "f4ee1d"},
 		{TierlistID: 1, Text: "A", Colour: "d81621"},
 		{TierlistID: 1, Text: "B", Colour: "00bef1"},
@@ -98,14 +98,14 @@ func SeedItems() error {
 		return fmt.Errorf("database connection unavailable")
 	}
 
-	var itemsResult []models.Items
+	var itemsResult []models.Item
 	result := DB.Find(&itemsResult)
 
 	if result.RowsAffected > 0 {
 		return nil
 	}
 
-	items := []models.Items{
+	items := []models.Item{
 		{TierlistID: 1, Text: "Nacht der Untoten", Image: "https://static.wikia.nocookie.net/callofduty/images/2/2b/Nacht_Der_Untoten_Menu_Selection_WaW.png/revision/latest?cb=20161009103531", TierID: 4},
 		{TierlistID: 1, Text: "Verrückt", Image: "https://static.wikia.nocookie.net/callofduty/images/a/a1/Verruckt_Menu_Selection_WaW.png/revision/latest?cb=20161009103542", TierID: 3},
 		{TierlistID: 1, Text: "Shi No Numa", Image: "https://static.wikia.nocookie.net/callofduty/images/2/2f/Shi_No_Numa_Menu_Selection_WaW.png/revision/latest?cb=20161009103553", TierID: 2},
