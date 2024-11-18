@@ -22,8 +22,8 @@ func SeedTierlist() error {
 		return nil
 	}
 
-	tierlist := models.Tierlist{
-		Name: "Tierlist 1",
+	tierlists := []models.Tierlist{
+		{Name: "Tierlist 1",
 		Description:  "This is the first Tierlist",
 		CreatorID: 1,
 		Tiers: []models.Tier{
@@ -41,12 +41,51 @@ func SeedTierlist() error {
 		{Text: "Der Riese", Image: "https://static.wikia.nocookie.net/callofduty/images/8/86/Der_Riese_Menu_Selection_WaW.png/revision/latest?cb=20161009103603"},
 		{Text: "Moon", Image: "https://static.wikia.nocookie.net/callofduty/images/c/cc/Moon_Menu_Selection_BO.png/revision/latest?cb=20240710075602"},
 		},
-		Version: 1,
+		Version: 1,},
+		{Name: "Tierlist 2",
+		Description:  "This is the second Tierlist",
+		CreatorID: 2,
+		Tiers: []models.Tier{
+			{Text: "S", Colour: "f4ee1d"},
+			{Text: "A", Colour: "d81621"},
+			{Text: "B", Colour: "00bef1"},
+			{Text: "C", Colour: "37f100"},
+			{Text: "D", Colour: "ffffff"},
+			{Text: "F", Colour: "000000"},
+		},
+		Items: []models.Item{
+			{Text: "Green Hill Zone", Image: "https://example.com/green_hill_zone.png"},
+			{Text: "Chemical Plant Zone", Image: "https://example.com/chemical_plant_zone.png"},
+			{Text: "Casino Night Zone", Image: "https://example.com/casino_night_zone.png"},
+			{Text: "Ice Cap Zone", Image: "https://example.com/ice_cap_zone.png"},
+			{Text: "Sky Sanctuary Zone", Image: "https://example.com/sky_sanctuary_zone.png"},
+		},
+		Version: 1,},
+		{Name: "Tierlist 3",
+		Description:  "This is the third Tierlist",
+		CreatorID: 3,
+		Tiers: []models.Tier{
+			{Text: "S", Colour: "f4ee1d"},
+			{Text: "A", Colour: "d81621"},
+			{Text: "B", Colour: "00bef1"},
+			{Text: "C", Colour: "37f100"},
+			{Text: "D", Colour: "ffffff"},
+			{Text: "F", Colour: "000000"},
+		},
+		Items: []models.Item{
+			{Text: "Mario", Image: "https://example.com/mario.png"},
+			{Text: "Luigi", Image: "https://example.com/luigi.png"},
+			{Text: "Peach", Image: "https://example.com/peach.png"},
+			{Text: "Bowser", Image: "https://example.com/bowser.png"},
+			{Text: "Yoshi", Image: "https://example.com/yoshi.png"},
+		},
+		},
 	}
-
+	for _, tierlist := range tierlists {
 	if err := DB.Create(&tierlist).Error; err != nil {
 		return fmt.Errorf("failed to seed tierlist")
 	}
+}
 
 	fmt.Println("Tierlists Seeded Successfully")
 	return nil
