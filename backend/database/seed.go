@@ -5,6 +5,13 @@ import (
 	"tierlist/models"
 )
 
+func Seed() {
+	SeedUsers()
+	SeedTierlists()
+	SeedTiers()
+	SeedItems()
+}
+
 func SeedUsers() error {
 	if DB == nil {
 		return fmt.Errorf("database connection unavailable")
