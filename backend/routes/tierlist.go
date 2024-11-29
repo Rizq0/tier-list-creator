@@ -23,6 +23,7 @@ func getAllTierlists(c *gin.Context) {
 	var tierlists []models.Tierlist
 	if err := database.DB.Find(&tierlists).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"Error": "Database Error"})
+		return
 	}
 	c.JSON(http.StatusOK, tierlists)
 }
@@ -32,6 +33,7 @@ func getTierlistById(c *gin.Context) {
 	id := c.Param("id")
 	if err := database.DB.First(&tierlists, id).Error; err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"Error": "Tierlist not found"})
+		return
 	}
 	c.JSON(http.StatusOK, tierlists)
 }
