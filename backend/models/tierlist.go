@@ -26,7 +26,7 @@ type Item struct {
 	Text string `json:"text"`
 	Image string `json:"image"`
 	// TierID int `json:"tier_id"` // This is not needed for now
-	TierText string `json:"tier_text"`
+	TierText string `gorm:"default:U" json:"tier_text"`
 	// Tier Tier `gorm:"foreignKey:TierID"` // This is not needed for now
 	Tierlist Tierlist `gorm:"foreignKey:TierlistID"`
 }
