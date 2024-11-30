@@ -31,7 +31,7 @@ type Item struct {
 	Tierlist Tierlist `gorm:"foreignKey:TierlistID"`
 }
 
-// POST /tierlist structs
+// POST & PUT /tierlist structs
 
 type TierRequest struct {
 	Name string `json:"text" binding:"required"`
@@ -50,4 +50,9 @@ type CreateTierlistRequest struct {
 	Tiers []TierRequest `json:"tiers" binding:"required"`
 	Items []ItemRequest `json:"items" binding:"required"`
 	Creator int `json:"creator_id" binding:"required"` // placeholder for now
+}
+
+type UpdateTierlistRequest struct {
+	Tiers []TierRequest `json:"tiers" binding:"required"`
+	Items []ItemRequest `json:"items" binding:"required"`
 }
