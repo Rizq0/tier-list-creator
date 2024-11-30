@@ -49,5 +49,5 @@ type CreateTierlistRequest struct {
 	Description string `json:"description" binding:"required"`
 	Tiers []TierRequest `json:"tiers" binding:"required"`
 	Items []ItemRequest `json:"items" binding:"required"`
-	Creator int `json:"creator_id" binding:"required"`
+	Creator int `json:"creator_id" binding:"required"` // placeholder for now
 }
