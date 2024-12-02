@@ -44,7 +44,7 @@ type ItemRequest struct {
 	Tier string `json:"tier" binding:"required"`
 }	
 
-type CreateTierlistRequest struct {
+type TierlistRequest struct {
 	Name string `json:"name" binding:"required"`
 	Description string `json:"description" binding:"required"`
 	Tiers []TierRequest `json:"tiers" binding:"required"`
